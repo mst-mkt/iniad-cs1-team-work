@@ -4,28 +4,42 @@
         <title>赤羽の美味しい飲食店</title>
         <meta charset="utf-8">
         <link rel="stylesheet" href="style/style.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New&display=swap" rel="stylesheet">
     </head>
     <body>
-        <header>
-            <h1>赤羽の美味しい飲食店</h1>
-        </header>
-        <aside>
-            <ul>
-                <li>
-                    <a href="./east.html">東口</a>
+        <header class="header">
+            <h1 class="header__title">赤羽の美味しい飲食店</h1>
+            <ul class="header__links">
+                <li >
+                    <a href="./east.html" class="header__link">東口</a>
                 </li>
                 <li>
-                    <a href="./west.html">西口</a>
+                    <a href="./west.html" class="header__link">西口</a>
                 </li>
                 <li>
-                    <a href="./lala-garden.html">ララガーデン</a>
+                    <a href="./lala-garden.html" class="header__link">ララガーデン</a>
                 </li>
             </ul>
+        </header>
+        <aside class="sidemenu">
         </aside>
-        <main>
+        <main class="content">
+            <div class="slideshow">
+                <img src="./assets/Q'BolaAsere_1.jpg" alt="Q'BolaAsere">
+            </div>
+            <section class="content__section">
+                <h2 class="content__title">おすすめ</h2>
+                <div class="recommend">
+                    <div class="recommend__card"></div>
+                    <div class="recommend__card"></div>
+                    <div class="recommend__card"></div>
+                    <div class="recommend__card"></div>
+                    <div class="recommend__card"></div>
+                    <div class="recommend__card"></div>
+                </div>
+            </section>
+            <section class="content__section">
+                <h2 class="content__title">おすすめない</h2>
+            </section>
         </main>
         <footer></footer>
         <script src="script/main.js"></script>
