@@ -87,7 +87,16 @@ main {
   height: 6vmin;
   border-radius: 50%;
   border: 0;
-  background-color: #ae876f;
+  background-color: #fffcf8;
+  box-shadow: 2px 2px 8px rgba(112, 57, 24, 0.1882352941), -2px -2px 8px #fff;
+  padding: 3px;
+}
+.slideshow__button > div {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: dotted 2px rgba(112, 57, 24, 0.6);
+  position: relative;
 }
 
 footer {
@@ -112,7 +121,7 @@ footer {
 
 .recommend {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 12px;
   margin: 0;
   padding: 0;
@@ -120,10 +129,20 @@ footer {
 }
 .recommend__card {
   background-color: rgba(255, 255, 255, 0.8);
-  height: 60vmin;
+  padding: 4vmin;
   border-radius: 2vmin;
 }
-
-::-webkit-scrollbar {
-  display: none;
+.recommend__image {
+  width: 100%;
+  aspect-ratio: 16/9;
+  margin: 0 auto;
+  border-radius: 1.6vmin;
+  overflow: hidden;
+}
+.recommend__image > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }/*# sourceMappingURL=style.css.map */
