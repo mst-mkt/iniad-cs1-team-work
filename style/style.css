@@ -98,6 +98,28 @@ main {
   border: dotted 2px rgba(112, 57, 24, 0.6);
   position: relative;
 }
+.slideshow__button > div::before, .slideshow__button > div::after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: calc(50% - 1px);
+  left: 30%;
+  background-color: rgba(112, 57, 24, 0.8);
+  width: 40%;
+  height: 2px;
+}
+.slideshow__button--left > div::before {
+  transform: translateY(calc(70.7% + 2px)) rotate(45deg);
+}
+.slideshow__button--left > div::after {
+  transform: translateY(calc(-70.7% - 2px)) rotate(-45deg);
+}
+.slideshow__button--right > div::before {
+  transform: translateY(calc(70.7% + 2px)) rotate(-45deg);
+}
+.slideshow__button--right > div::after {
+  transform: translateY(calc(-70.7% - 2px)) rotate(45deg);
+}
 
 footer {
   grid-area: footer;
