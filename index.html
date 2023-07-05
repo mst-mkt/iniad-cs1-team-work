@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="ja">
     <head>
-        <title>赤羽の美味しい飲食店</title>
+        <title>赤羽の美味しい料理店</title>
         <meta charset="utf-8" />
         <link rel="stylesheet" href="style/style.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"
+        />
     </head>
     <body>
         <header class="header">
-            <h1 class="header__title">赤羽の美味しい飲食店</h1>
+            <h1 class="header__title">赤羽の美味しい料理店</h1>
             <ul class="header__links">
                 <li>
                     <a href="./east.html" class="header__link">東口</a>
@@ -26,30 +30,34 @@
         <main class="content">
             <div class="slideshow">
                 <button
-                    class="slideshow__button slideshow__button--left"
+                    class="slidebutton slidebutton--left"
                     onclick="slideLeft()"
                 >
-                    <div><div></div></div>
+                    <div class="slidebutton__inner">
+                        <div class="slidebutton__arrow"></div>
+                    </div>
                 </button>
                 <div class="slideshow__container" onscroll="resetAutoSlide()">
                     <div class="slideshow__item">
-                        <img src="assets/Q'BolaAsere_1.jpg" alt="1" />
+                        <img src="assets/images/Q'BolaAsere_1.jpg" alt="1" />
                     </div>
                     <div class="slideshow__item">
-                        <img src="assets/bamburg_1.jpg" alt="2" />
+                        <img src="assets/images/bamburg_1.jpg" alt="2" />
                     </div>
                     <div class="slideshow__item">
-                        <img src="assets/hayashida_1.jpg" alt="3" />
+                        <img src="assets/images/hayashida_1.jpg" alt="3" />
                     </div>
                     <div class="slideshow__item">
-                        <img src="assets/danbo_1.jpg" alt="4" />
+                        <img src="assets/images/danbo_1.jpg" alt="4" />
                     </div>
                 </div>
                 <button
-                    class="slideshow__button slideshow__button--right"
+                    class="slidebutton slidebutton--right"
                     onclick="slideRight()"
                 >
-                    <div><div></div></div>
+                    <div class="slidebutton__inner">
+                        <div class="slidebutton__arrow"></div>
+                    </div>
                 </button>
                 <div class="slideshow__dots">
                     <div class="slideshow__dot"></div>
@@ -62,75 +70,120 @@
                 <h2 class="content__title">おすすめ</h2>
                 <div class="recommend">
                     <div class="recommend__card">
-                        <div class="recommend__image">
-                            <img
-                                src="assets/Q'BolaAsere_2.jpg"
-                                alt="Q'BolaAsere"
-                            />
-                        </div>
-                        <div class="recommend__text">
-                            <h3 class="recommend__title">Q'BolaAsere</h3>
-                            <p class="recommend__description">
-                                赤羽駅から徒歩5分。キューバサンドとお酒を楽しめる赤羽のお店です。店内は独特な雰囲気があり、料理に非常にマッチしています。
-                            </p>
-                        </div>
-                    </div>
-                    <div class="recommend__card">
-                        <div class="recommend__image">
-                            <img
-                                src="assets/bamburg_2.jpg"
-                                alt="東京Bamバーグ"
-                            />
-                        </div>
-                        <div class="recommend__text">
-                            <h3 class="recommend__title">東京Bamバーグ</h3>
-                            <p class="recommend__description">
-                                本格的なハンバーグが楽しめる素晴らしいお店です。ここでは、豪快なサイズとジューシーな肉汁が特徴のハンバーグが、美味しい料理として提供されています。
-                            </p>
-                        </div>
-                    </div>
-                    <div class="recommend__card">
-                        <div class="recommend__image">
-                            <img src="assets/hayashida_1.jpg" alt="はやし田" />
-                        </div>
-                        <div class="recommend__text">
-                            <h3 class="recommend__title">はやし田</h3>
-                            <p class="recommend__description">
-                                ここでは、鶏清湯に特化したラーメンを食べることができます。また、サブメニューで出している杯数限定のノドグロのラーメンも非常においしいです。
-                            </p>
+                        <div class="recommend__inner">
+                            <div class="recommend__image">
+                                <img
+                                    src="assets/images/Q'BolaAsere_2.jpg"
+                                    alt="Q'BolaAsere"
+                                />
+                            </div>
+                            <div class="recommend__text">
+                                <h3 class="recommend__title">
+                                    Q'BolaAsere<span></span>
+                                </h3>
+                                <p class="recommend__description">
+                                    赤羽駅から徒歩5分。キューバサンドとお酒を楽しめる赤羽のお店です。店内は独特な雰囲気があり、料理に非常にマッチしています。
+                                </p>
+                                <p class="recommend__info">
+                                    <i class="ti ti-map-pin-filled"></i>
+                                    赤羽駅東口より徒歩2分
+                                </p>
+                                <p class="recommend__info">
+                                    <i class="ti ti-coin-yen"></i>
+                                    1,000円〜1,999円
+                                </p>
+                                <p class="recommend__info">
+                                    <i class="ti ti-external-link"></i>
+                                    <a href="https://www.qbolaasere.info"
+                                        >公式サイト</a
+                                    >
+                                </p>
+                            </div>
                         </div>
                     </div>
                     <div class="recommend__card">
-                        <div class="recommend__image">
-                            <img src="assets/kyosuke_1.jpg" alt="つけ麺京介" />
-                        </div>
-                        <div class="recommend__text">
-                            <h3 class="recommend__title">赤羽京介</h3>
-                            <p class="recommend__description">
-                                食べ応え抜群の平打ち麺がおいしいつけ麺がメインのお店。どろりとしたスープの濃厚さは麺と良く絡み、相性が抜群です。
-                            </p>
+                        <div class="recommend__inner">
+                            <div class="recommend__image">
+                                <img
+                                    src="assets/images/bamburg_2.jpg"
+                                    alt="東京Bamバーグ"
+                                />
+                            </div>
+                            <div class="recommend__text">
+                                <h3 class="recommend__title">
+                                    東京Bamバーグ<span></span>
+                                </h3>
+                                <p class="recommend__description">
+                                    本格的なハンバーグが楽しめる素晴らしいお店です。ここでは、豪快なサイズとジューシーな肉汁が特徴のハンバーグが、美味しい料理として提供されています。
+                                </p>
+                                <p class="recommend__info">
+                                    <i class="ti ti-map-pin-filled"></i>
+                                    赤羽駅東口より徒歩2分
+                                </p>
+                                <p class="recommend__info">
+                                    <i class="ti ti-coin-yen"></i>
+                                    1,000円〜1,999円
+                                </p>
+                            </div>
                         </div>
                     </div>
                     <div class="recommend__card">
-                        <div class="recommend__image">
-                            <img src="assets/danbo_1.jpg" alt="喫茶 暖母" />
-                        </div>
-                        <div class="recommend__text">
-                            <h3 class="recommend__title">喫茶 暖母</h3>
-                            <p class="recommend__description">
-                                昭和レトロな雰囲気が漂う居心地の良い喫茶店です。値段もお手頃な価格でシンプルなメニューが多く、ランチの時は特に賑わっています。
-                            </p>
+                        <div class="recommend__inner">
+                            <div class="recommend__image">
+                                <img
+                                    src="assets/images/hayashida_1.jpg"
+                                    alt="はやし田"
+                                />
+                            </div>
+                            <div class="recommend__text">
+                                <h3 class="recommend__title">
+                                    はやし田<span></span>
+                                </h3>
+                                <p class="recommend__description">
+                                    ここでは、鶏清湯に特化したラーメンを食べることができます。また、サブメニューで出している杯数限定のノドグロのラーメンも非常においしいです。
+                                </p>
+                                <p class="recommend__info">
+                                    <i class="ti ti-map-pin-filled"></i>
+                                    赤羽駅東口より徒歩2分
+                                </p>
+                                <p class="recommend__info">
+                                    <i class="ti ti-coin-yen"></i>
+                                    1,000円〜1,999円
+                                </p>
+                                <p class="recommend__info">
+                                    <i class="ti ti-external-link"></i>
+                                    <a
+                                        href="https://www.ramenings.com/hayashida"
+                                        >公式サイト</a
+                                    >
+                                </p>
+                            </div>
                         </div>
                     </div>
                     <div class="recommend__card">
-                        <div class="recommend__image">
-                            <img src="assets/tochocafe_1.jpg" alt="糖朝Cafe" />
-                        </div>
-                        <div class="recommend__text">
-                            <h3 class="recommend__title">糖朝Cafe</h3>
-                            <p class="recommend__description">
-                                赤羽駅から徒歩5分。おしゃれなカフェです。お店の雰囲気も良く、お料理も美味しいです。
-                            </p>
+                        <div class="recommend__inner">
+                            <div class="recommend__image">
+                                <img
+                                    src="assets/images/danbo_1.jpg"
+                                    alt="喫茶 暖母"
+                                />
+                            </div>
+                            <div class="recommend__text">
+                                <h3 class="recommend__title">
+                                    喫茶 暖母<span></span>
+                                </h3>
+                                <p class="recommend__description">
+                                    昭和レトロな雰囲気が漂う居心地の良い喫茶店です。値段もお手頃な価格でシンプルなメニューが多く、ランチの時は特に賑わっています。
+                                </p>
+                                <p class="recommend__info">
+                                    <i class="ti ti-map-pin-filled"></i>
+                                    赤羽駅東口より徒歩2分
+                                </p>
+                                <p class="recommend__info">
+                                    <i class="ti ti-coin-yen"></i>
+                                    1,000円〜1,999円
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
