@@ -56,12 +56,15 @@ body {
 }
 .header__title {
   margin: 0;
-  color: var(--color-text);
   font-family: "Kaisei Tokumin", serif;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   font-size: clamp(30px, 4vmin, 48px);
+}
+.header__title > a {
+  color: var(--color-text);
+  text-decoration: none;
 }
 @media screen and (max-width: 680px) {
   .header__links {
