@@ -220,7 +220,7 @@ body {
   transform: rotate(180deg);
 }
 
-.recommend {
+.cards {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(min(26vh, 92vw), 1fr));
   gap: min(4vmin, 24px);
@@ -228,60 +228,28 @@ body {
   padding: 0;
   list-style: none;
 }
-.recommend__image {
-  grid-area: image;
-  width: 100%;
-  aspect-ratio: 16/9;
-  margin: 0 auto;
-  border-radius: 1.6vmin;
-  overflow: hidden;
-  position: relative;
-  z-index: 2;
+@container (min-width: 50vw) {
+  .cards__inner {
+    grid-template-areas: "image text" "image text";
+    gap: 3vmin;
+  }
+  .cards__inner > .cards__image {
+    width: 36vw;
+    max-height: 100vw;
+    aspect-ratio: auto;
+  }
+  .cards__inner::after {
+    display: none;
+  }
+  .cards__inner::before {
+    width: 35%;
+    right: max(-3vmin, -18px);
+    bottom: max(-3vmin, -18px);
+    left: auto;
+  }
 }
-.recommend__image > img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.recommend__text {
-  grid-area: text;
-  position: relative;
-  z-index: 2;
-  text-align: left;
-  margin-block: 1em;
-  font-size: min(16px, 3vmin);
-}
-.recommend__text i {
-  font-size: 1.4em;
-  position: relative;
-  top: 0.1em;
-}
-.recommend__title {
-  text-align: left;
-  display: flex;
-  align-items: center;
-  margin: 0;
-}
-.recommend__title > span {
-  flex-grow: 1;
-  display: inline-block;
-  height: max(0.3vmin, 3px);
-  border-radius: max(0.15vmin, 1.5px);
-  width: auto;
-  margin-inline: 2vmin;
-  background-image: repeating-linear-gradient(120deg, var(--color-text), var(--color-text) max(0.5vmin, 5px), transparent max(0.5vmin, 5px), transparent max(1vmin, 10px));
-  opacity: 0.4;
-  position: relative;
-}
-.recommend__info {
-  margin: 0;
-}
-.recommend__info a {
-  color: var(--color-link);
-}
-.recommend__card {
+
+.card {
   background-color: var(--color-panel);
   padding: min(3vmin, 18px);
   border-radius: 2vmin;
@@ -290,36 +258,12 @@ body {
   color: var(--color-text);
   container-type: inline-size;
 }
-.recommend__card:nth-child(1) > .recommend__inner::before {
-  content: url("../assets/svg/burger.svg");
-}
-.recommend__card:nth-child(1) > .recommend__inner::after {
-  content: "BURGER";
-}
-.recommend__card:nth-child(2) > .recommend__inner::before {
-  content: url("../assets/svg/steak.svg");
-}
-.recommend__card:nth-child(2) > .recommend__inner::after {
-  content: "BURG";
-}
-.recommend__card:nth-child(3) > .recommend__inner::before {
-  content: url("../assets/svg/noodle.svg");
-}
-.recommend__card:nth-child(3) > .recommend__inner::after {
-  content: "RAMEN";
-}
-.recommend__card:nth-child(4) > .recommend__inner::before {
-  content: url("../assets/svg/dinner.svg");
-}
-.recommend__card:nth-child(4) > .recommend__inner::after {
-  content: "CAFE";
-}
-.recommend__inner {
+.card__inner {
   width: 100%;
   display: grid;
   grid-template-areas: "image image" "text text";
 }
-.recommend__inner::after {
+.card__inner::after {
   display: inline;
   position: absolute;
   z-index: 1;
@@ -336,7 +280,7 @@ body {
   right: 0;
   height: 100%;
 }
-.recommend__inner::before {
+.card__inner::before {
   position: absolute;
   z-index: 1;
   bottom: -1vmin;
@@ -344,25 +288,82 @@ body {
   width: 60%;
   opacity: 0.04;
 }
-@container (min-width: 50vw) {
-  .recommend__inner {
-    grid-template-areas: "image text" "image text";
-    gap: 3vmin;
-  }
-  .recommend__inner > .recommend__image {
-    width: 36vw;
-    max-height: 100vw;
-    aspect-ratio: auto;
-  }
-  .recommend__inner::after {
-    display: none;
-  }
-  .recommend__inner::before {
-    width: 35%;
-    right: max(-3vmin, -18px);
-    bottom: max(-3vmin, -18px);
-    left: auto;
-  }
+.card:nth-child(1) > .card__inner::before {
+  content: url("../assets/svg/burger.svg");
+}
+.card:nth-child(1) > .card__inner::after {
+  content: "BURGER";
+}
+.card:nth-child(2) > .card__inner::before {
+  content: url("../assets/svg/steak.svg");
+}
+.card:nth-child(2) > .card__inner::after {
+  content: "BURG";
+}
+.card:nth-child(3) > .card__inner::before {
+  content: url("../assets/svg/noodle.svg");
+}
+.card:nth-child(3) > .card__inner::after {
+  content: "RAMEN";
+}
+.card:nth-child(4) > .card__inner::before {
+  content: url("../assets/svg/dinner.svg");
+}
+.card:nth-child(4) > .card__inner::after {
+  content: "CAFE";
+}
+.card__image {
+  grid-area: image;
+  width: 100%;
+  aspect-ratio: 16/9;
+  margin: 0 auto;
+  border-radius: 1.6vmin;
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+}
+.card__image > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.card__text {
+  grid-area: text;
+  position: relative;
+  z-index: 2;
+  text-align: left;
+  margin-block: 1em;
+  font-size: min(16px, 3vmin);
+}
+.card__text i {
+  font-size: 1.4em;
+  position: relative;
+  top: 0.1em;
+}
+.card__title {
+  text-align: left;
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+.card__title > span {
+  flex-grow: 1;
+  display: inline-block;
+  height: max(0.3vmin, 3px);
+  border-radius: max(0.15vmin, 1.5px);
+  width: auto;
+  margin-inline: 2vmin;
+  background-image: repeating-linear-gradient(120deg, var(--color-text), var(--color-text) max(0.5vmin, 5px), transparent max(0.5vmin, 5px), transparent max(1vmin, 10px));
+  opacity: 0.4;
+  position: relative;
+}
+.card__info {
+  margin: 0;
+}
+.card__info a {
+  color: var(--color-link);
 }
 
 ::-webkit-scrollbar {
