@@ -26,8 +26,44 @@
                     >
                 </li>
             </ul>
+            <button class="header__button" onclick="toggleSidemenu()">
+                <div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </button>
         </header>
-        <aside class="sidemenu"></aside>
+        <aside class="sidemenu">
+            <div class="sidemenu__inner">
+                <div class="sidemenu__bar sidemenu__bar--top"></div>
+                <div class="sidemenu__bar sidemenu__bar--left"></div>
+                <div class="sidemenu__bar sidemenu__bar--right"></div>
+                <div class="sidemenu__bar sidemenu__bar--bottom"></div>
+                <ul class="sidemenu__links">
+                    <li>
+                        <a href="./" class="sidemenu__link">ホーム</a>
+                    </li>
+                    <li>
+                        <a href="./east.html" class="sidemenu__link">東口</a>
+                    </li>
+                    <li>
+                        <a href="./west.html" class="sidemenu__link">西口</a>
+                    </li>
+                    <li>
+                        <a href="./lala-garden.html" class="sidemenu__link"
+                            >ララガーデン</a
+                        >
+                    </li>
+                </ul>
+            </div>
+        </aside>
         <main class="content">
             <div class="slideshow">
                 <button
@@ -61,7 +97,7 @@
                     </div>
                 </button>
                 <div class="slideshow__dots">
-                    <div class="slideshow__dot"></div>
+                    <div class="slideshow__dot slideshow__dot--active"></div>
                     <div class="slideshow__dot"></div>
                     <div class="slideshow__dot"></div>
                     <div class="slideshow__dot"></div>
