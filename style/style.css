@@ -615,6 +615,14 @@ body {
     content: "OKONOMI";
 }
 
+.card--sweets > .card__inner::before {
+    content: url("../assets/svg/candy.svg");
+}
+
+.card--sweets > .card__inner::after {
+    content: "SWEETS";
+}
+
 .card__image {
     grid-area: image;
     width: 100%;
