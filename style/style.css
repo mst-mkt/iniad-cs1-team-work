@@ -564,42 +564,61 @@ body {
     opacity: 0.04;
 }
 
-.card:nth-child(1) > .card__inner::before {
+.card--burger > .card__inner::before {
     content: url("../assets/svg/burger.svg");
 }
 
-.card:nth-child(1) > .card__inner::after {
+.card--burger > .card__inner::after {
     content: "BURGER";
 }
 
-.card:nth-child(2) > .card__inner::before {
+.card--burg > .card__inner::before {
     content: url("../assets/svg/steak.svg");
 }
 
-.card:nth-child(2) > .card__inner::after {
+.card--burg > .card__inner::after {
     content: "BURG";
 }
 
-.card:nth-child(3) > .card__inner::before {
+.card--ramen > .card__inner::before {
     content: url("../assets/svg/noodle.svg");
 }
 
-.card:nth-child(3) > .card__inner::after {
+.card--ramen > .card__inner::after {
     content: "RAMEN";
 }
 
-.card:nth-child(4) > .card__inner::before {
+.card--cafe > .card__inner::before {
     content: url("../assets/svg/dinner.svg");
 }
 
-.card:nth-child(4) > .card__inner::after {
+.card--cafe > .card__inner::after {
     content: "CAFE";
+}
+
+.card--thailand > .card__inner::before {
+    content: url("../assets/svg/thailand.svg");
+}
+
+.card--thailand > .card__inner::after {
+    content: "THAI";
+}
+
+.card--okonomiyaki > .card__inner::before {
+    content: url("../assets/svg/okonomiyaki.svg");
+    width: 100%;
+    left: -30%;
+    bottom: -5vmin;
+}
+
+.card--okonomiyaki > .card__inner::after {
+    content: "OKONOMI";
 }
 
 .card__image {
     grid-area: image;
     width: 100%;
-    aspect-ratio: 16/9;
+    aspect-ratio: 16 / 9;
     margin: 0 auto;
     border-radius: 1.6vmin;
     overflow: hidden;
@@ -685,6 +704,13 @@ body {
         right: max(-3vmin, -18px);
         bottom: max(-3vmin, -18px);
         left: auto;
+    }
+
+    .card--okonomiyaki > .card__inner::before {
+        width: 45%;
+        left: auto;
+        right: max(-3vmin, -18px);
+        bottom: -10vmin;
     }
 }
 
