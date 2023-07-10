@@ -31,6 +31,15 @@ html {
     font-family: "Kiwi Maru", serif;
 }
 
+/* スクロールバー */
+::-webkit-scrollbar {
+    width: 4px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--color-accent);
+    border-radius: 2px;
+}
+
 /* レイアウト等 */
 body {
     margin: 0;
@@ -44,6 +53,7 @@ body {
     background-color: var(--bg-main);
     overflow-y: scroll;
     overflow-x: hidden;
+    scrollbar-width: 2px;
 }
 
 /* ヘッダー */
