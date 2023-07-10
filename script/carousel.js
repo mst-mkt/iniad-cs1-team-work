@@ -1,10 +1,3 @@
-const toggleSidemenu = () => {
-    const sidemenu = document.getElementsByClassName("sidemenu")[0];
-    const button = document.getElementsByClassName("header__button")[0];
-    sidemenu.classList.toggle("sidemenu--active");
-    button.classList.toggle("header__button--active");
-};
-
 const slideShow = document.getElementsByClassName("slideshow__container")[0];
 
 const setSlideDot = () => {
