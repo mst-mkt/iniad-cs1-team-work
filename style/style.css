@@ -625,7 +625,8 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  position: absolute;
+  gap: 4vmin;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
@@ -633,7 +634,7 @@ body {
   z-index: 101;
 }
 .loading__symbol > div {
-  width: 30%;
+  width: 30vmin;
   position: static;
 }
 :where(.loading__symbol div) {
@@ -642,7 +643,7 @@ body {
   opacity: 1;
   border-radius: 50%;
   border: solid 1px #fff;
-  background-color: rgba(255, 255, 255, 0.0666666667);
+  background-color: rgba(255, 255, 255, 0.1333333333);
   position: absolute;
   left: 10%;
   bottom: 0;
@@ -653,6 +654,7 @@ body {
   opacity: 1;
   font-size: min(24px, 4vmin);
   font-family: "Lexend Peta", sans-serif;
+  font-weight: bold;
 }
 .loading--in .loading__curtain > div {
   width: 100%;
