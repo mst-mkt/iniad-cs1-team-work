@@ -64,9 +64,8 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 2vmin 4vmin;
-    width: calc(100vw - 8vmin);
+    width: 100vw;
     min-height: min(30px, 7.5vmin);
-    box-sizing: content-box;
     position: sticky;
     top: 0;
     left: 0;
