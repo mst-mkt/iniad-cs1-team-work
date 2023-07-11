@@ -13,3 +13,18 @@ window.onload = () => {
         loading.classList.remove("loading--in");
     }, 1000);
 };
+
+const scrollUp = () => {
+    const html = document.getElementsByTagName("html")[0];
+    html.scrollTop = 0;
+};
+
+const displayScrollButton = () => {
+    console.log("scroll");
+    const button = document.getElementsByClassName("top-button")[0];
+    if (window.scrollY > 100) {
+        button.classList.remove("top-button--disabled");
+    } else {
+        button.classList.add("top-button--disabled");
+    }
+};
