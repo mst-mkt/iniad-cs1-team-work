@@ -87,7 +87,7 @@ body {
 .header__links > li::before {
     content: "";
     position: absolute;
-    bottom: -0.5vmin;
+    bottom: -1vmin;
     width: 0;
     left: 50%;
     height: 0.3vmin;
@@ -106,7 +106,7 @@ body {
 
 .header__links > .header__link--current::before {
     background-color: var(--color-text);
-    opacity: 0.4;
+    opacity: 0.2;
     width: 120%;
     left: -10%;
 }
@@ -574,7 +574,9 @@ body {
     border: 0;
     background-color: var(--color-panel);
     box-shadow: var(--shadow-normal);
-    transition: box-shadow 0.2s ease-in-out;
+    transition-property: box-shadow, transform;
+    transition-duration: 0.2s, 0.1s;
+    transition-timing-function: ease-in-out;
     padding: 3px;
     cursor: pointer;
 }
@@ -631,6 +633,10 @@ body {
 
 .slidebutton--left:hover .slidebutton__arrow {
     transform: translateX(-0.4vmin);
+}
+
+.slidebutton:active {
+    transform: scale(0.95);
 }
 
 .slidebutton--right {
