@@ -637,7 +637,7 @@ body {
 /* コンテンツ内のカード */
 .cards {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(min(36vh, 92vw), 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(36svh, 92vw), 1fr));
     gap: min(4vmin, 24px);
     margin: 0;
     padding: 0;
