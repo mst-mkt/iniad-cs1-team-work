@@ -59,14 +59,12 @@ const displayScrollButton = () => {
     const scrollButton = document.getElementsByClassName("top-button")[0];
     const menuButton = document.getElementsByClassName("menu-button")[0];
     const footer = document.getElementsByTagName("footer")[0];
-    console.log(footer);
     if (window.scrollY > 100) {
         scrollButton.classList.remove("top-button--disabled");
         scrollButton.style.bottom = `calc(${Math.max(
             window.innerHeight - footer.getBoundingClientRect().top,
             0
         )}px + 4vmin)`;
-        console.log(footer.getBoundingClientRect().top);
         menuButton.classList.remove("menu-button--top");
     } else {
         scrollButton.classList.add("top-button--disabled");
