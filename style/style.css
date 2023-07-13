@@ -733,7 +733,7 @@ body {
     content: url("../assets/svg/okonomiyaki.svg");
     width: 100%;
     left: -30%;
-    bottom: -5vmin;
+    bottom: -10vmin;
 }
 
 .card--okonomiyaki > .card__inner::after {
@@ -746,6 +746,30 @@ body {
 
 .card--sweets > .card__inner::after {
     content: "SWEETS";
+}
+
+.card--soba > .card__inner::before {
+    content: url("../assets/svg/soba.svg");
+}
+
+.card--soba > .card__inner::after {
+    content: "SOBA";
+}
+
+.card--fish > .card__inner::before {
+    content: url("../assets/svg/fish.svg");
+}
+
+.card--fish > .card__inner::after {
+    content: "FISH";
+}
+
+.card--curry > .card__inner::before {
+    content: url("../assets/svg/curry.svg");
+}
+
+.card--curry > .card__inner::after {
+    content: "CURRY";
 }
 
 .card__image {
@@ -1067,19 +1091,19 @@ footer > p:first-child {
     width: 20px;
     height: 40px;
     animation: ramenAnimation 2s ease-in-out infinite;
-  }
-  
-  @keyframes ramenAnimation {
+}
+
+@keyframes ramenAnimation {
     0% {
-      transform: translateY(0);
-      opacity: 0;
+        transform: translateY(0);
+        opacity: 0;
     }
     50% {
-      transform: translateY(-10px);
-      opacity: 1;
+        transform: translateY(-10px);
+        opacity: 1;
     }
     100% {
-      transform: translateY(0);
-      opacity: 0;
+        transform: translateY(0);
+        opacity: 0;
     }
-  }
+}
