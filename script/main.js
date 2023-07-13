@@ -8,6 +8,22 @@ const toggleSidemenu = () => {
 const loading = document.getElementsByClassName("loading")[0];
 loading.classList.add("loading--in");
 window.onload = () => {
+    console.log(
+        `%cCREATED AT\n%c        ____%c_   __%c_______    ____\n       /  _%c/ | / /%c  _/   |  / __ \\\n       / /%c/  |/ /%c/ // /| | / / / /\n     _/ /%c/ /|  /%c/ // ___ |/ /_/ /\n    /___%c/_/ |_/%c___/_/  |_/_____/  \n\n%c© mst-mkt, s-renren, and N0N0suke`,
+        "font-size: 1.2em; font-style: italic; font-weight: bold;",
+        "color: auto",
+        "color: #3bafe6",
+        "color: auto",
+        "color: #3bafe6",
+        "color: auto",
+        "color: #3bafe6",
+        "color: auto",
+        "color: #3bafe6",
+        "color: auto",
+        "color: #3bafe6",
+        "color: auto",
+        "color: #3bafe6; font-style: italic; font-weight: bold;"
+    );
     setTimeout(() => {
         loading.classList.add("loading--outed");
         loading.classList.remove("loading--in");
