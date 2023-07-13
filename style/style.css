@@ -1066,10 +1066,10 @@ footer > p:first-child {
     display: inline-block;
     width: 20px;
     height: 40px;
-    animation: steamAnimation 2s ease-in-out infinite;
+    animation: ramenAnimation 2s ease-in-out infinite;
   }
   
-  @keyframes steamAnimation {
+  @keyframes ramenAnimation {
     0% {
       transform: translateY(0);
       opacity: 0;
