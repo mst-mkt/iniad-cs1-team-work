@@ -104,6 +104,13 @@ body {
     left: -10%;
 }
 
+.header__links > .header__link--current::before {
+    background-color: var(--color-text);
+    opacity: 0.4;
+    width: 120%;
+    left: -10%;
+}
+
 .header__link {
     color: var(--color-text);
     font-family: "Kaisei Opti", serif;
