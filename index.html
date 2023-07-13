@@ -5,6 +5,7 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <meta name="theme-color" content="#fc5268" />
+        <link rel="icon" href="assets/favicon.png" />
         <link rel="stylesheet" href="style/style.css" />
         <link
             rel="stylesheet"
@@ -61,19 +62,21 @@
                 </li>
             </ul>
         </header>
-        <button class="header__button" onclick="toggleSidemenu()">
-            <div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-        </button>
+        <div class="menu-button menu-button--top">
+            <button class="menu-button__inner" onclick="toggleSidemenu()">
+                <div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </button>
+        </div>
         <aside class="sidemenu">
             <div class="sidemenu__inner">
                 <div class="sidemenu__bar sidemenu__bar--top"></div>
@@ -146,7 +149,7 @@
                 </div>
             </div>
             <section class="content__section">
-                <h2 class="content__title">おすすめ</h2>
+                <h2 class="content__title" id="おすすめ">おすすめ</h2>
                 <div class="cards">
                     <div class="card card--burger">
                         <div class="card__inner">
@@ -268,10 +271,21 @@
                 </div>
             </section>
             <section class="content__section">
-                <h2 class="content__title">おすすめない</h2>
+                <h2 class="content__title" id="おすすめない">おすすめない</h2>
             </section>
         </main>
-        <footer></footer>
+        <footer>
+            <p>
+                copyrigth &copy; 2023<br /><a href="https://github.com/mst-mkt"
+                    >mst-mkt</a
+                >, <a href="https://github.com/s-renren">s-renren</a>, and
+                <a href="https://github.com/n0n0suke">N0N0suke</a> All Rights
+                Reserved.
+            </p>
+            <p>
+                このWebサイトはINIAD(東洋大学情報連携学部)の実習において作成されたものです。
+            </p>
+        </footer>
         <script src="script/main.js"></script>
         <script src="script/carousel.js"></script>
     </body>
