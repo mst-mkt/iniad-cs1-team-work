@@ -664,7 +664,18 @@ body {
     position: relative;
     overflow: hidden;
     color: var(--color-text);
+    opacity: 0;
+    transform: translateY(2vmin);
+    transition-property: opacity, transform;
+    transition-duration: 0.4s, 0.3s;
+    transition-delay: 0.2s;
+    transition-timing-function: ease-in-out;
     container-type: inline-size;
+}
+
+.card--in {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .card__inner {

@@ -24,6 +24,26 @@ window.onload = () => {
         "color: auto",
         "color: #3bafe6; font-style: italic; font-weight: bold;"
     );
+    (() => {
+        const callback = (entries, object) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("card--in");
+                    object.unobserve(entry.target);
+                }
+            });
+        };
+        const option = {
+            root: null,
+            rootMargin: "100px 0px",
+            threshold: [0, 0.5, 1],
+        };
+        const cards = document.getElementsByClassName("card");
+        const observer = new IntersectionObserver(callback, option);
+        for (const card of cards) {
+            observer.observe(card);
+        }
+    })();
     setTimeout(() => {
         loading.classList.add("loading--outed");
         loading.classList.remove("loading--in");
