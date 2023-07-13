@@ -1059,3 +1059,27 @@ footer > p:first-child {
         display: block;
     }
 }
+
+/*ラーメンのアニメーション*/
+.ramen-animation {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 40px;
+    animation: steamAnimation 2s ease-in-out infinite;
+  }
+  
+  @keyframes steamAnimation {
+    0% {
+      transform: translateY(0);
+      opacity: 0;
+    }
+    50% {
+      transform: translateY(-10px);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 0;
+    }
+  }
