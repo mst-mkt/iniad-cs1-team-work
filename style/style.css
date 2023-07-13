@@ -35,11 +35,7 @@ html {
 
 /* スクロールバー */
 ::-webkit-scrollbar {
-    width: 4px;
-}
-::-webkit-scrollbar-thumb {
-    background-color: var(--color-accent);
-    border-radius: 2px;
+    display: none;
 }
 
 /* レイアウト等 */
@@ -993,6 +989,46 @@ body {
     }
 }
 
+/* フッター */
+footer {
+    width: 100vw;
+    height: min(100px, 20vmin);
+    background-color: var(--color-panel);
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    top: min(5px, 1vmin);
+    left: 0;
+    background-color: var(--color-accent);
+    opacity: 0.4;
+}
+
+footer > p {
+    margin: 0;
+    color: var(--color-text);
+    font-size: min(12px, 2vmin);
+}
+
+footer > p > a {
+    color: var(--color-link);
+    text-decoration: none;
+}
+
+footer > p:first-child {
+    font-weight: bold;
+}
+
 /* メディアクエリ */
 @media screen and (max-width: 680px) {
     .header {
@@ -1022,8 +1058,4 @@ body {
     .sidemenu {
         display: block;
     }
-}
-
-::-webkit-scrollbar {
-    display: none;
 }
